@@ -30,7 +30,7 @@ namespace Alterai_óra
         private void InitializeComponent()
         {
             this.lblTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTime
@@ -44,16 +44,17 @@ namespace Alterai_óra
             this.lblTime.Size = new System.Drawing.Size(364, 96);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "00:00:00";
-            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
-            // label1
+            // lblDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(97, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 14);
-            this.label1.TabIndex = 1;
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Anquietas", 42F);
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(71, 96);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(212, 50);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "0000.00.00";
             // 
             // Form1
             // 
@@ -62,7 +63,7 @@ namespace Alterai_óra
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(364, 241);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTime);
             this.Font = new System.Drawing.Font("Anquietas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
@@ -78,7 +79,7 @@ namespace Alterai_óra
         #endregion
 
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDate;
     }
 }
 

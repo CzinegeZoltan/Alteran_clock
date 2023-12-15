@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Alterai_óra
 {
     public partial class Form1 : Form
     {
         private const float DefaultFontSize = 36;
-        private const int MinimumFormWidth = 382;
-        private const int MinimumFormHeight = 289;
+        private const int MinimumFormWidth = 380;
+        private const int MinimumFormHeight = 280;
+        private const int SpacingBetweenLabels = 5; // Csökkentett érték a két label közötti térközre
+
         private Timer timer;
         private bool colonVisible;
 
@@ -37,6 +33,17 @@ namespace Alterai_óra
             lblTime.Dock = DockStyle.Fill;
             lblTime.TextAlign = ContentAlignment.MiddleCenter;
 
+            lblDate.AutoSize = false;
+            lblDate.Dock = DockStyle.Bottom;
+            lblDate.TextAlign = ContentAlignment.MiddleCenter;
+
+            // A két label közötti térköz beállítása
+            lblDate.Margin = new Padding(0, SpacingBetweenLabels, 0, 0);
+            lblTime.Margin = new Padding(0, SpacingBetweenLabels, 0, 0);
+
+            this.Controls.Add(lblTime);
+            this.Controls.Add(lblDate);
+
             SetInitialFontSize();
             SetDoubleBuffered(this);
             SetDoubleBuffered(lblTime);
@@ -46,6 +53,7 @@ namespace Alterai_óra
         {
             colonVisible = DateTime.Now.Second % 2 == 0;
             lblTime.Text = GetFormattedTime();
+            lblDate.Text = DateTime.Now.ToString("yyyy.MM.dd");
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -58,17 +66,14 @@ namespace Alterai_óra
         {
             float fontSize = Math.Max(DefaultFontSize, Math.Min(this.Width, this.Height) / 3.6f);
             lblTime.Font = new Font(lblTime.Font.FontFamily, fontSize, FontStyle.Bold);
+            lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 2, FontStyle.Bold);
         }
 
         private void SetFontSize()
         {
             float fontSize = Math.Max(DefaultFontSize, Math.Min(this.Width, this.Height) / 3.6f);
             lblTime.Font = new Font(lblTime.Font.FontFamily, fontSize, FontStyle.Bold);
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
+            lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 2, FontStyle.Bold);
         }
 
         private void SetDoubleBuffered(Control control)
@@ -78,19 +83,9 @@ namespace Alterai_óra
 
         private void CheckWindowSize()
         {
-            //string timeText = GetFormattedTime();
-            //SizeF textSize;
-            //using (Graphics graphics = lblTime.CreateGraphics())
-            //{
-            //    textSize = graphics.MeasureString(timeText, lblTime.Font);
-            //}
-
-            //int idealWidth = (int)Math.Ceiling(textSize.Width);
-            //int idealHeight = (int)Math.Ceiling(textSize.Height);
-
-            //// Ablakméret beállítása az "ideális" szélesség és magasság alapján, de sosem lehet kisebb a minimális méretnél
-            //this.Size = new Size(Math.Max(idealWidth, MinimumFormWidth), Math.Max(idealHeight, MinimumFormHeight));
-        
+            int formWidth = Math.Max(this.Width, MinimumFormWidth);
+            int formHeight = Math.Max(this.Height, MinimumFormHeight);
+            this.Size = new Size(formWidth, formHeight);
         }
 
         private string GetFormattedTime()
@@ -101,11 +96,6 @@ namespace Alterai_óra
                 timeText = timeText.Replace(":", " ");
             }
             return timeText;
-        }
-
-        private void lblTime_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
