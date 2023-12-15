@@ -18,3 +18,13 @@ C:\Users\Zoltán\Downloads\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.cspr
 C:\Users\Zoltán\Downloads\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.csproj.CoreCompileInputs.cache
 C:\Users\Zoltán\Downloads\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.exe
 C:\Users\Zoltán\Downloads\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.pdb
+D:\Alterai_óra\Alterai_óra\bin\Debug\Alterai_óra.exe.config
+D:\Alterai_óra\Alterai_óra\bin\Debug\Alterai_óra.exe
+D:\Alterai_óra\Alterai_óra\bin\Debug\Alterai_óra.pdb
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.csproj.AssemblyReference.cache
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.Form1.resources
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.Properties.Resources.resources
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.csproj.GenerateResource.cache
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.csproj.CoreCompileInputs.cache
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.exe
+D:\Alterai_óra\Alterai_óra\obj\Debug\Alterai_óra.pdb

@@ -41,7 +41,7 @@ namespace Alterai_óra
             this.lblTime.ForeColor = System.Drawing.Color.White;
             this.lblTime.Location = new System.Drawing.Point(0, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(366, 200);
+            this.lblTime.Size = new System.Drawing.Size(364, 96);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "00:00:00";
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
@@ -61,12 +61,12 @@ namespace Alterai_óra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(366, 250);
+            this.ClientSize = new System.Drawing.Size(364, 241);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTime);
             this.Font = new System.Drawing.Font("Anquietas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MaximumSize = new System.Drawing.Size(1200, 400);
-            this.MinimumSize = new System.Drawing.Size(382, 289);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(380, 280);
             this.Name = "Form1";
             this.Text = "Alterai Óra";
             this.Load += new System.EventHandler(this.Form1_Load);
