@@ -29,6 +29,7 @@ namespace Alterai_óra
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -36,12 +37,11 @@ namespace Alterai_óra
             // lblTime
             // 
             this.lblTime.BackColor = System.Drawing.Color.Black;
-            this.lblTime.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTime.Font = new System.Drawing.Font("Anquietas", 85F);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(0, 0);
+            this.lblTime.Location = new System.Drawing.Point(8, 9);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(364, 96);
+            this.lblTime.Size = new System.Drawing.Size(362, 86);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "00:00:00";
             // 
@@ -50,7 +50,7 @@ namespace Alterai_óra
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Anquietas", 42F);
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(71, 96);
+            this.lblDate.Location = new System.Drawing.Point(77, 104);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(212, 50);
             this.lblDate.TabIndex = 2;
@@ -62,10 +62,11 @@ namespace Alterai_óra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(364, 241);
+            this.ClientSize = new System.Drawing.Size(382, 241);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTime);
             this.Font = new System.Drawing.Font("Anquietas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(380, 280);
             this.Name = "Form1";

@@ -9,7 +9,7 @@ namespace Alterai_óra
         private const float DefaultFontSize = 36;
         private const int MinimumFormWidth = 380;
         private const int MinimumFormHeight = 280;
-        private const int SpacingBetweenLabels = 5; // Csökkentett érték a két label közötti térközre
+        private const int SpacingBetweenLabels = 20; // Csökkentett érték a két label közötti térközre
 
         private Timer timer;
         private bool colonVisible;
@@ -30,7 +30,7 @@ namespace Alterai_óra
             timer.Start();
 
             lblTime.AutoSize = false;
-            lblTime.Dock = DockStyle.Fill;
+            lblTime.Dock = DockStyle.Top; // A lblTime beállítása a felső pozícióra
             lblTime.TextAlign = ContentAlignment.MiddleCenter;
 
             lblDate.AutoSize = false;
@@ -38,8 +38,8 @@ namespace Alterai_óra
             lblDate.TextAlign = ContentAlignment.MiddleCenter;
 
             // A két label közötti térköz beállítása
-            lblDate.Margin = new Padding(0, SpacingBetweenLabels, 0, 0);
-            lblTime.Margin = new Padding(0, SpacingBetweenLabels, 0, 0);
+            lblDate.Margin = new Padding(0, 0, 0, 10);
+            lblTime.Margin = new Padding(0, 0, 0, 10);
 
             this.Controls.Add(lblTime);
             this.Controls.Add(lblDate);
@@ -60,20 +60,24 @@ namespace Alterai_óra
         {
             SetFontSize();
             CheckWindowSize();
+
+            // Módosítás a térköz beállításához
+            int timeLabelHeight = (this.ClientSize.Height - Math.Abs(SpacingBetweenLabels)) / 2;
+            lblTime.Height = timeLabelHeight;
         }
 
         private void SetInitialFontSize()
         {
             float fontSize = Math.Max(DefaultFontSize, Math.Min(this.Width, this.Height) / 3.6f);
             lblTime.Font = new Font(lblTime.Font.FontFamily, fontSize, FontStyle.Bold);
-            lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 2, FontStyle.Bold);
+            lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 1.6f, FontStyle.Bold);
         }
 
         private void SetFontSize()
         {
             float fontSize = Math.Max(DefaultFontSize, Math.Min(this.Width, this.Height) / 3.6f);
             lblTime.Font = new Font(lblTime.Font.FontFamily, fontSize, FontStyle.Bold);
-            lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 2, FontStyle.Bold);
+             //lblDate.Font = new Font(lblTime.Font.FontFamily, fontSize / 2, FontStyle.Bold);
         }
 
         private void SetDoubleBuffered(Control control)
