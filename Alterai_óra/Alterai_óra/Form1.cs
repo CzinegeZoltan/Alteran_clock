@@ -95,7 +95,7 @@ namespace Alterai_óra
 
         private string GetFormattedTime()
         {
-            string timeText = DateTime.Now.ToString("yyyy.MM.dd\nHH:mm:ss");
+            string timeText = DateTime.Now.ToString("HH:mm:ss\nyyyy.MM.dd");
             if (!colonVisible)
             {
                 timeText = timeText.Replace(":", " ");
