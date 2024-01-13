@@ -36,13 +36,14 @@ namespace Alterai_óra
             // lblTime
             // 
             this.lblTime.BackColor = System.Drawing.Color.Black;
-            this.lblTime.Font = new System.Drawing.Font("Anquietas", 83.24999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Anquietas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(12, 71);
+            this.lblTime.Location = new System.Drawing.Point(3, -2);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(362, 86);
+            this.lblTime.Size = new System.Drawing.Size(198, 88);
             this.lblTime.TabIndex = 0;
-            this.lblTime.Text = "00:00:00";
+            this.lblTime.Text = "Tempus et diem";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -56,7 +57,7 @@ namespace Alterai_óra
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(217, 120);
             this.Name = "Form1";
-            this.Text = "Alterai Óra";
+            this.Text = "Horologium";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
