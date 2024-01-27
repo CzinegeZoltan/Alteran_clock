@@ -51,9 +51,8 @@ namespace Alterai_óra
         private void Form1_Resize(object sender, EventArgs e)
         {
             SetFontSize();
-            CheckWindowSize();
         }
-
+        //betűméret -- fontsize
         private void SetInitialFontSize()
         {
             float fontSize = Math.Max(DefaultFontSize, Math.Min(this.Width, this.Height) / 3.9f);
@@ -75,24 +74,7 @@ namespace Alterai_óra
         {
             control.GetType().GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)?.SetValue(control, true, null);
         }
-
-        private void CheckWindowSize()
-        {
-            //string timeText = GetFormattedTime();
-            //SizeF textSize;
-            //using (Graphics graphics = lblTime.CreateGraphics())
-            //{
-            //    textSize = graphics.MeasureString(timeText, lblTime.Font);
-            //}
-
-            //int idealWidth = (int)Math.Ceiling(textSize.Width);
-            //int idealHeight = (int)Math.Ceiling(textSize.Height);
-
-            //// Ablakméret beállítása az "ideális" szélesség és magasság alapján, de sosem lehet kisebb a minimális méretnél
-            //this.Size = new Size(Math.Max(idealWidth, MinimumFormWidth), Math.Max(idealHeight, MinimumFormHeight));
-
-        }
-
+        //kiírás formázás -- text format
         private string GetFormattedTime()
         {
             string timeText = DateTime.Now.ToString("HH:mm:ss\nyyyy.MM.dd");
