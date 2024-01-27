@@ -8,7 +8,7 @@ A betűtípust a Csillagkapu, a Csillagkapu Atlantisz, a Stargate Univese című
 
 # Alteran Clock
 
-**HUN**
+**ENG**
 
 This is an application written in C#. It retrieves the system time and date, which it displays. First, you need to install the font because otherwise the display may slip, which can be solved by resizing the window. But if you don't install the font for some reason (e.g., unable to read it), then it loses its meaning and it's better to install the font named "Clock".
 
