@@ -3,6 +3,7 @@
 **HUN**
 
 Ez egy alkalmazás C# programnyelvvel írva. Lekéri a rendszer időt és a dátumot, amelyeket megjelenít. Először a Betűtípust kell telepíteni, mert különben a kiírás csúszhat, ami az ablak átméretezésével megoldható. De ha nem telepíti a betűtípust akkor elveszti az értelmét és több értrlmr van a "Clock" nevűt telepíteni. 
+
 A betűtípust a Csillagkapu, a Csillagkapu Atlantisz, a Stargate Univese című sorozatokban és a Csillagkapú Az igasság ládája című filmben használta az Alteraiak és leszármazzotaik "anquietas.ttf". 
 
 # Alteran Clock
